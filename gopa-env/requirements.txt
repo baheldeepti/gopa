@@ -1,0 +1,12 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-dotenv==1.0.1
+boto3==1.35.86
+python-multipart==0.0.20
+pydantic==2.10.4
+livekit==1.0.3
+livekit-agents>=1.0.0
+livekit-plugins-aws[realtime]>=1.0.0
+Pillow==11.1.0
+aiofiles==24.1.0
+httpx==0.28.1

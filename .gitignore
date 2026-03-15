@@ -1,0 +1,7 @@
+node_modules/
+venv/
+.env
+__pycache__/
+generated_stories/
+.DS_Store
+dist/
