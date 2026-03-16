@@ -5,6 +5,7 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 function getImageUrl(scene) {
   if (!scene?.image_url) return null;
   const url = scene.image_url;
+  if (url.startsWith('data:')) return url;
   if (url.startsWith('/static')) return API_URL + url;
   if (url.startsWith('http')) return url;
   return API_URL + '/' + url;

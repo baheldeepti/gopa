@@ -21,16 +21,16 @@ export default function HomePage({ onStart, bedtimeMode, onSetChildName }) {
       </motion.div>
       <motion.h1 initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }}
         className={`font-display font-bold text-3xl mb-2 ${bedtimeMode ? 'text-amber-100' : 'text-gray-800'}`}>
-        What Should Krishna<br />Learn Today?
+        ✨ What Adventure Awaits<br />Little Krishna Today?
       </motion.h1>
       <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }}
         className={`font-body text-base mb-6 max-w-xs ${bedtimeMode ? 'text-amber-300' : 'text-gray-500'}`}>
-        Personalized animated stories about Bal Krishna — just for your little one
+        AI-powered stories, art & voice from Vrindavan — brought to life by Amazon Nova
       </motion.p>
       <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.45 }}
         className="w-full max-w-xs mb-6">
         <label className={`block text-sm font-display font-semibold mb-2 ${bedtimeMode ? 'text-amber-200' : 'text-gray-600'}`}>
-          What is your little one is name?
+          What is your little one's name?
         </label>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)}
           placeholder="e.g. Arjun, Meera, Aarav..."
@@ -45,7 +45,7 @@ export default function HomePage({ onStart, bedtimeMode, onSetChildName }) {
         <Sparkles size={22} /> Start Adventure
       </motion.button>
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}
-        className="mt-8 text-xs text-gray-400">Powered by <span className="font-semibold">Amazon Nova</span></motion.p>
+        className="mt-8 text-xs text-gray-400">Powered by <span className="font-semibold">Amazon Nova</span> · Nova Lite · Nova Canvas · Nova Reel</motion.p>
     </motion.div>
   );
 }

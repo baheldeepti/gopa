@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-const API_URL = import.meta.env.VITE_API_URL || '';
+const API_URL = 'https://xky29a0bl1.execute-api.us-east-1.amazonaws.com/Prod';
 export function useStoryGeneration() {
   const [stage, setStage] = useState('idle');
   const [storyData, setStoryData] = useState(null);
@@ -10,10 +10,10 @@ export function useStoryGeneration() {
     setError(null);
     setProgress(20);
     try {
-      const res = await fetch('/api/story/generate', {
+      const res = await fetch(`${API_URL}/api/story/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ value, child_name: childName, child_photo_key: childPhotoKey }),
+        body: JSON.stringify({ prompt: `Krishna teaches ${value} to children in Vrindavan`, value, child_name: childName, child_photo_key: childPhotoKey }),
       });
       if (!res.ok) throw new Error(await res.text().catch(() => res.statusText));
       const result = await res.json();
